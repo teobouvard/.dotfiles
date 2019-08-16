@@ -7,3 +7,6 @@ git clone https://github.com/teobouvard/.dotfiles.git
 cd .dotfiles
 sudo ./install.sh
 ```
+
+## TODO
+export VISUAL
