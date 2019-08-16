@@ -150,6 +150,6 @@ success "git is set up"
 ###     SYMLINKS                    ###
 #######################################
 
-ln -sf .dotfiles/zshrc $HOME/.zshrc
-ln -sf .dotfiles/tmux.conf $HOME/.tmux.conf
+ln -sf .dotfiles/.zshrc $HOME/.zshrc
+ln -sf .dotfiles/.tmux.conf $HOME/.tmux.conf
 success "symlinks created"
