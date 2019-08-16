@@ -60,16 +60,11 @@ bash -c  "$(wget -qO- https://git.io/vQgMr) 103"
 ###     INSTALL REFIND              ###
 #######################################
 
-if [ -d /boot/efi/EFI/refind/ ];
-	then info "refind already installed"
-	sudo refind-install
-else
-	sudo apt-add-repository -y ppa:rodsmith/refind
-	sudo apt-get update
-	sudo apt-get -y install refind
-	sudo refind-install
-	success "refind installed"
-fi
+sudo apt-add-repository -y ppa:rodsmith/refind
+sudo apt-get update
+sudo apt-get -y install refind
+sudo refind-install
+success "installed refind"
 
 sudo git-force-clone https://github.com/andersfischernielsen/rEFInd-minimal-black.git /boot/efi/EFI/refind/themes/
 success "installed refind theme"
@@ -114,6 +109,9 @@ gsettings set org.cinnamon.desktop.sound event-sounds false
 gsettings set org.cinnamon.sounds login-enabled false
 gsettings set org.cinnamon.sounds logout-enabled false
 gsettings set org.cinnamon.sounds switch-enabled false
+gsettings set org.cinnamon.sounds tile-enabled false
+gsettings set org.cinnamon.sounds plug-enabled false
+gsettings set org.cinnamon.sounds unplug-enabled false
 
 # hide icons
 gsettings set org.nemo.desktop computer-icon-visible false
