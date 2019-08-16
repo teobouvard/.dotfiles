@@ -88,11 +88,12 @@ fi
 #######################################
 
 mkdir -p $HOME/Pictures/Wallpapers/
-wget -O $HOME/Pictures/Wallpapers/dragon.jpg https://www.nasa.gov/sites/default/files/thumbnails/image/iss058e027197.jpg
-wget -O $HOME/Pictures/Wallpapers/flow.jpg https://dubaiastronomy.com/wp-content/uploads/2019/04/art-artistic-background-1020315.jpg
+sudo wget -O $HOME/Pictures/Wallpapers/dragon.jpg https://www.nasa.gov/sites/default/files/thumbnails/image/iss058e027197.jpg
+sudo wget -O $HOME/Pictures/Wallpapers/flow.jpg https://dubaiastronomy.com/wp-content/uploads/2019/04/art-artistic-background-1020315.jpg
 gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/Wallpapers/dragon.jpg"
-sed -i "s/draw-user.*/draw-user-background=true/g" /etc/lightdm/slick-greeter.conf
-sed -i "s/draw-grid.*/draw-grid=false/g" /etc/lightdm/slick-greeter.conf
+
+sudo sed -i "s/draw-user.*/draw-user-background=true/g" /etc/lightdm/slick-greeter.conf
+sudo sed -i "s/draw-grid.*/draw-grid=false/g" /etc/lightdm/slick-greeter.conf
 success "desktop is set up"
 
 #######################################
