@@ -1,0 +1,14 @@
+zsh
+htop
+vim
+tmux
+ranger
+python3-pip
+snap
+git
+nmap
+screenfetch
+chromium-browser
+# necessary packages for Gogh color palette
+dconf-cli
+uuid-runtime

@@ -1,2 +1,1 @@
-# .dotfiles
-My personal environment setup
+This is a framework I use to set up my personal linux environment. Take a look at the [install script](install.sh) before running it !
