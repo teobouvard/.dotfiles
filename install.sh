@@ -56,7 +56,8 @@ success "packages installed"
 ###     INSTALL ZSH SHELL           ###
 #######################################
 
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
+chsh -s $(which zsh)
 success "Oh My Zsh installed"
 
 #######################################
