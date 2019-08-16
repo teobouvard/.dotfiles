@@ -46,7 +46,7 @@ success "packages installed"
 #######################################
 
 sudo git-force-clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
 success "Oh My Zsh installed"
 
 #######################################
@@ -106,6 +106,9 @@ gsettings set org.cinnamon.desktop.interface icon-theme 'Mint-Y-Grey'
 
 gsettings set org.cinnamon.desktop.sound volume-sound-enabled false
 gsettings set org.cinnamon.desktop.sound event-sounds false
+gsettings set org.cinnamon.sounds login-enabled false
+gsettings set org.cinnamon.sounds logout-enabled false
+gsettings set org.cinnamon.sounds switch-enabled false
 
 gsettings set org.nemo.desktop computer-icon-visible false
 gsettings set org.nemo.desktop home-icon-visible false
@@ -133,5 +136,5 @@ success "git is set up"
 ###     SYMLINKS                    ###
 #######################################
 
-sudo ln -s ./zshrc $HOME/.zshrc
-ln -s ./tmux.conf $HOME/.tmux.conf
+ln -sf ./zshrc $HOME/.zshrc
+ln -sf ./tmux.conf $HOME/.tmux.conf
