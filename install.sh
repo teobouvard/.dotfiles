@@ -45,8 +45,8 @@ success "packages installed"
 ###     INSTALL ZSH SHELL           ###
 #######################################
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
-sudo chsh -s $(which zsh)
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+chsh -s $(which zsh)
 success "Oh My Zsh installed"
 
 #######################################
@@ -133,5 +133,5 @@ success "git is set up"
 ###     SYMLINKS                    ###
 #######################################
 
+sudo ln -s ./zshrc $HOME/.zshrc
 ln -s ./tmux.conf $HOME/.tmux.conf
-ln -s ./zshrc $HOME/.zshrc
