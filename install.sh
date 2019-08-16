@@ -41,14 +41,14 @@ error() {
 ###     INSTALL PACKAGES            ###
 #######################################
 
-sudo apt-get -y install $(grep -vE "^\s*#" packages  | tr "\n" " ")
+sudo apt-get -y install $(grep -vE "^\s*#" packages  | tr "\n" " ") > /dev/null
 success "packages installed"
 
 #######################################
 ###     INSTALL ZSH SHELL           ###
 #######################################
 
-sudo git-force-clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+sudo git-force-clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh > /dev/null
 sudo chsh -s $(which zsh)
 success "Oh My Zsh installed"
 
@@ -63,8 +63,8 @@ bash -c  "$(wget -qO- https://git.io/vQgMr) 103"
 ###     INSTALL REFIND              ###
 #######################################
 
-sudo apt-add-repository -y ppa:rodsmith/refind
-sudo apt-get update
+sudo apt-add-repository -y -q ppa:rodsmith/refind > /dev/null
+sudo apt-get update > /dev/null
 sudo apt-get -y install refind
 sudo refind-install
 success "installed refind"
@@ -88,15 +88,15 @@ fi
 #######################################
 
 mkdir -p $HOME/Pictures/Wallpapers/
-curl --output $HOME/Pictures/Wallpapers/dragon.jpg https://www.nasa.gov/sites/default/files/thumbnails/image/iss058e027197.jpg
-curl --output $HOME/Pictures/Wallpapers/flow.jpg https://dubaiastronomy.com/wp-content/uploads/2019/04/art-artistic-background-1020315.jpg
+wget -O $HOME/Pictures/Wallpapers/dragon.jpg https://www.nasa.gov/sites/default/files/thumbnails/image/iss058e027197.jpg
+wget -O $HOME/Pictures/Wallpapers/flow.jpg https://dubaiastronomy.com/wp-content/uploads/2019/04/art-artistic-background-1020315.jpg
 gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/Wallpapers/dragon.jpg"
 sed -i "s/draw-user.*/draw-user-background=true/g" /etc/lightdm/slick-greeter.conf
 sed -i "s/draw-grid.*/draw-grid=false/g" /etc/lightdm/slick-greeter.conf
 success "desktop is set up"
 
 #######################################
-###     GSETTINGS                   ###
+###     WORKSPACE SETTINGS          ###
 #######################################
 
 # download adapta themes
@@ -139,7 +139,7 @@ gsettings set org.cinnamon alttab-switcher-style 'icons+preview'
 gsettings set org.cinnamon panels-autohide "['1,true']"
 gsettings set org.cinnamon panels-height "['1,30']"
 gsettings set org.cinnamon startup-animation false
-success "settings updated"
+success "workspace settings updated"
 
 #######################################
 ###     SET UP GIT                  ###
@@ -149,7 +149,7 @@ git config --global user.email "teobouvard@gmail.com"
 git config --global user.name "Téo Bouvard"
 git config --global credential.helper store
 git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
-success "git is set up" 
+success "git settings updated" 
 
 #######################################
 ###     SYMLINKS                    ###
