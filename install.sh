@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #######################################
 ###			DISPLAY FUNCTIONS		###
@@ -38,8 +38,8 @@ error() {
 ###			CHECK PRIVILEGES		###
 #######################################
 
-if (( $EUID > 0 )); then
-    error "please run as root"
+if (( $EUID > 0 ));
+	then error "please run as root"
     exit
 else 
 	success "root privileges checked"
@@ -70,14 +70,15 @@ bash -c  "$(wget -qO- https://git.io/vQgMr)"
 ###			INSTALL REFIND			###
 #######################################
 
-if [ -d /boot/efi/EFI/refind/ ]
-	success "refind already installed"
+if [ -d /boot/efi/EFI/refind/ ];
+	then success "refind already installed"
 else
 	apt-add-repository -y ppa:rodsmith/refind
 	apt-get update
 	apt-get -y install refind
 	refind-install
 	success "refind installed"
+fi
 
 git clone https://github.com/andersfischernielsen/rEFInd-minimal-black.git /boot/efi/EFI/refind/themes/
 success "installed refind theme"
