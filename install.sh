@@ -46,7 +46,7 @@ success "packages installed"
 #######################################
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
 success "Oh My Zsh installed"
 
 #######################################
@@ -115,8 +115,8 @@ gsettings set org.nemo.desktop volumes-visible false
 
 gsettings set org.cinnamon.desktop.wm.preferences focus-mode 'sloppy'
 gsettings set org.cinnamon alttab-switcher-style 'icons+preview'
-gsettings set org.cinnamon panels-autohide ['1,true']
-gsettings set org.cinnamon panels-height ['1,30']
+gsettings set org.cinnamon panels-autohide "['1,true']"
+gsettings set org.cinnamon panels-height "['1,30']"
 gsettings set org.cinnamon startup-animation false
 
 #######################################
@@ -128,6 +128,7 @@ git config --global user.name "Téo Bouvard"
 git config --global credential.helper store
 git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 success "git is set up" 
+
 #######################################
 ###     SYMLINKS                    ###
 #######################################
