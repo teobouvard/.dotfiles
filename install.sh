@@ -95,28 +95,40 @@ success "desktop is set up"
 ###     GSETTINGS                   ###
 #######################################
 
+# download adapta themes
 sudo apt-add-repository ppa:tista/adapta -y
 sudo apt-get update
 sudo apt-get install -y adapta-gtk-theme
 
+# set adapta theme
 gsettings set org.cinnamon.desktop.wm.preferences theme 'Adapta-Nokto'
 gsettings set org.cinnamon.theme name 'Adapta-Nokto'
 gsettings set org.cinnamon.desktop.interface gtk-theme 'Adapta-Nokto'
 gsettings set org.cinnamon.desktop.interface icon-theme 'Mint-Y-Grey'
 
+# disable sounds
 gsettings set org.cinnamon.desktop.sound volume-sound-enabled false
 gsettings set org.cinnamon.desktop.sound event-sounds false
 gsettings set org.cinnamon.sounds login-enabled false
 gsettings set org.cinnamon.sounds logout-enabled false
 gsettings set org.cinnamon.sounds switch-enabled false
 
+# hide icons
 gsettings set org.nemo.desktop computer-icon-visible false
 gsettings set org.nemo.desktop home-icon-visible false
 gsettings set org.nemo.desktop trash-icon-visible false
 gsettings set org.nemo.desktop network-icon-visible false
 gsettings set org.nemo.desktop volumes-visible false
 
-gsettings set org.cinnamon.desktop.wm.preferences focus-mode 'sloppy'
+#workspace settings
+gsettings set org.cinnamon workspace-osd-visible false
+gsettings set org.cinnamon.muffin workspace-cycle true
+gsettings set org.cinnamon.muffin workspaces-only-on-primary true
+gsettings set org.cinnamon workspace-expo-view-as-grid false
+
+
+# visual settings
+gsettings set org.cinnamon.desktop.wm.preferences focus-mode 'click'
 gsettings set org.cinnamon alttab-switcher-style 'icons+preview'
 gsettings set org.cinnamon panels-autohide "['1,true']"
 gsettings set org.cinnamon panels-height "['1,30']"
