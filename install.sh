@@ -54,7 +54,7 @@ success "Oh My Zsh installed"
 #######################################
 
 # Neutron, Oceanic Next, Pencil Dark
-bash -c  "$(wget -qO- https://git.io/vQgMr)"
+bash -c  "$(wget -qO- https://git.io/vQgMr) 103"
 
 #######################################
 ###     INSTALL REFIND              ###
@@ -89,6 +89,8 @@ mkdir -p $HOME/Pictures/Wallpapers/
 curl --output $HOME/Pictures/Wallpapers/dragon.jpg https://www.nasa.gov/sites/default/files/thumbnails/image/iss058e027197.jpg
 curl --output $HOME/Pictures/Wallpapers/flow.jpg https://dubaiastronomy.com/wp-content/uploads/2019/04/art-artistic-background-1020315.jpg
 gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/Wallpapers/dragon.jpg"
+sed -i "s/draw-user.*/draw-user-background=true/g" /etc/lightdm/slick-greeter.conf
+sed -i "s/draw-grid.*/draw-grid=false/g" /etc/lightdm/slick-greeter.conf
 success "desktop is set up"
 
 #######################################
@@ -126,13 +128,13 @@ gsettings set org.cinnamon.muffin workspace-cycle true
 gsettings set org.cinnamon.muffin workspaces-only-on-primary true
 gsettings set org.cinnamon workspace-expo-view-as-grid false
 
-
 # visual settings
 gsettings set org.cinnamon.desktop.wm.preferences focus-mode 'click'
 gsettings set org.cinnamon alttab-switcher-style 'icons+preview'
 gsettings set org.cinnamon panels-autohide "['1,true']"
 gsettings set org.cinnamon panels-height "['1,30']"
 gsettings set org.cinnamon startup-animation false
+success "settings updated"
 
 #######################################
 ###     SET UP GIT                  ###
@@ -150,3 +152,4 @@ success "git is set up"
 
 ln -sf .dotfiles/zshrc $HOME/.zshrc
 ln -sf .dotfiles/tmux.conf $HOME/.tmux.conf
+success "symlinks created"

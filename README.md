@@ -10,3 +10,5 @@ cd .dotfiles
 
 ## TODO
 export VISUAL
+create terminal profile
+add gtile, cinnamon maximus extensions
