@@ -57,13 +57,13 @@ success "Oh My Zsh installed"
 #######################################
 
 # Neutron, Oceanic Next, Pencil Dark
-bash -c  "$(wget -qO- https://git.io/vQgMr) 103"
+bash -c  "$(wget -qO- https://git.io/vQgMr)"
 
 #######################################
 ###     INSTALL REFIND              ###
 #######################################
 
-sudo apt-add-repository -y -q ppa:rodsmith/refind > /dev/null
+sudo apt-add-repository -y ppa:rodsmith/refind > /dev/null
 sudo apt-get update > /dev/null
 sudo apt-get -y install refind
 sudo refind-install
