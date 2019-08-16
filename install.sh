@@ -49,7 +49,7 @@ fi
 ###     INSTALL PACKAGES            ###
 #######################################
 
-apt-get -y install $(grep -vE "^\s*#" packages  | tr "\n" " ")
+sudo apt-get -y install $(grep -vE "^\s*#" packages  | tr "\n" " ")
 success "packages installed"
 
 #######################################
@@ -73,12 +73,12 @@ bash -c  "$(wget -qO- https://git.io/vQgMr)"
 
 if [ -d /boot/efi/EFI/refind/ ];
 	then info "refind already installed"
-	refind-install
+	sudo refind-install
 else
-	apt-add-repository -y ppa:rodsmith/refind
-	apt-get update
-	apt-get -y install refind
-	refind-install
+	sudo apt-add-repository -y ppa:rodsmith/refind
+	sudo apt-get update
+	sudo apt-get -y install refind
+	sudo refind-install
 	success "refind installed"
 fi
 
@@ -89,7 +89,7 @@ success "installed refind theme"
 ###     REMOVE PWD FEEDBACK         ###
 #######################################
 
-mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled 
+sudo mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled 
 success "removed password feedback"
 
 #######################################
@@ -106,9 +106,9 @@ success "desktop is set up"
 ###     GSETTINGS                   ###
 #######################################
 
-apt-add-repository ppa:tista/adapta -y
-apt-get update
-apt-get install -y adapta-gtk-theme
+sudo apt-add-repository ppa:tista/adapta -y
+sudo apt-get update
+sudo apt-get install -y adapta-gtk-theme
 
 gsettings set org.cinnamon.desktop.wm.preferences theme 'Adapta-Nokto'
 gsettings set org.cinnamon.theme name 'Adapta-Nokto'
