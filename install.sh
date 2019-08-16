@@ -45,7 +45,7 @@ success "packages installed"
 ###     INSTALL ZSH SHELL           ###
 #######################################
 
-git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+git-force-clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 chsh -s $(which zsh)
 success "Oh My Zsh installed"
 
@@ -71,7 +71,7 @@ else
 	success "refind installed"
 fi
 
-git clone https://github.com/andersfischernielsen/rEFInd-minimal-black.git /boot/efi/EFI/refind/themes/
+git-force-clone https://github.com/andersfischernielsen/rEFInd-minimal-black.git /boot/efi/EFI/refind/themes/
 success "installed refind theme"
 
 #######################################
