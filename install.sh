@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#######################################
-###			DISPLAY FUNCTIONS		###
-#######################################
+###################################
+###     DISPLAY FUNCTIONS       ###
+###################################
 
 info() {
 	printf "["
@@ -35,7 +35,7 @@ error() {
 }
 
 #######################################
-###			CHECK PRIVILEGES		###
+###     CHECK PRIVILEGES            ###
 #######################################
 
 if (( $EUID > 0 ));
@@ -46,28 +46,28 @@ else
 fi
 
 #######################################
-###			INSTALL PACKAGES		###
+###     INSTALL PACKAGES            ###
 #######################################
 
 apt-get -y install $(grep -vE "^\s*#" packages  | tr "\n" " ")
 success "packages installed"
 
 #######################################
-###			INSTALL ZSH SHELL		###
+###     INSTALL ZSH SHELL           ###
 #######################################
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 success "Oh My Zsh installed"
 
 #######################################
-###			COLOR PALETTE			###
+###     COLOR PALETTE               ###
 #######################################
 
 # Neutron, Oceanic Next, Pencil Dark
 bash -c  "$(wget -qO- https://git.io/vQgMr)"
 
 #######################################
-###			INSTALL REFIND			###
+###     INSTALL REFIND              ###
 #######################################
 
 if [ -d /boot/efi/EFI/refind/ ];
@@ -84,14 +84,14 @@ git clone https://github.com/andersfischernielsen/rEFInd-minimal-black.git /boot
 success "installed refind theme"
 
 #######################################
-###			REMOVE PWD FEEDBACK		###
+###     REMOVE PWD FEEDBACK         ###
 #######################################
 
 mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled 
 success "removed password feedback"
 
 #######################################
-###			DESKTOP APPEARANCE		###
+###     DESKTOP APPEARANCE          ###
 #######################################
 
 mkdir -p $HOME/Pictures/Wallpapers/
@@ -101,7 +101,7 @@ gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures
 success "desktop is set up"
 
 #######################################
-###			GSETTINGS				###
+###     GSETTINGS                   ###
 #######################################
 
 apt-add-repository ppa:tista/adapta -y
@@ -122,14 +122,14 @@ gsettings set org.nemo.desktop trash-icon-visible false
 gsettings set org.nemo.desktop network-icon-visible false
 gsettings set org.nemo.desktop volumes-visible false
 
-gsettings set org.cinnamon.desktop.wm.preferences focus-mode 'mouse'
+gsettings set org.cinnamon.desktop.wm.preferences focus-mode 'sloppy'
 gsettings set org.cinnamon alttab-switcher-style 'icons+preview'
 gsettings set org.cinnamon panels-autohide ['1:true']
 gsettings set org.cinnamon panels-height ['1:30']
 gsettings set org.cinnamon startup-animation false
 
 #######################################
-###			SET UP GIT				###
+###     SET UP GIT                  ###
 #######################################
 
 git config --global user.email "teobouvard@gmail.com"
@@ -139,7 +139,7 @@ git config --global alias.lg "log --graph --abbrev-commit --decorate --format=fo
 success "git is set up"
 
 #######################################
-###			SYMLINKS				###
+###     SYMLINKS                    ###
 #######################################
 
 ln -s ./tmux.conf $HOME/.tmux.conf
