@@ -11,7 +11,8 @@ info() {
 	printf "INFO"
 	tput setaf 7
 	printf "] "
-	echo $*	
+ 	echo $*	
+	tput reset
 }
 
 success() {
@@ -22,6 +23,7 @@ success() {
 	tput setaf 7
 	printf "] "
 	echo $*	
+	tput reset
 }
 
 error() {
@@ -32,6 +34,7 @@ error() {
 	tput setaf 7
 	printf "] "
 	echo $*	
+	tput reset
 }
 
 #######################################
