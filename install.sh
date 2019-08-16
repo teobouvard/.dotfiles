@@ -48,7 +48,7 @@ success "packages installed"
 ###     INSTALL ZSH SHELL           ###
 #######################################
 
-sudo git-force-clone --quiet https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh > /dev/null
+sudo git-force-clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh > /dev/null
 sudo chsh -s $(which zsh)
 success "Oh My Zsh installed"
 
@@ -69,7 +69,7 @@ sudo apt-get -y install refind
 sudo refind-install
 success "installed refind"
 
-sudo git-force-clone --quiet https://github.com/andersfischernielsen/rEFInd-minimal-black.git /boot/efi/EFI/refind/themes/
+sudo git-force-clone https://github.com/andersfischernielsen/rEFInd-minimal-black.git /boot/efi/EFI/refind/themes/
 success "installed refind theme"
 
 #######################################
