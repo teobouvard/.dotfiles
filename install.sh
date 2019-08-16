@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 #######################################
 ###			DISPLAY FUNCTIONS		###
@@ -81,6 +81,13 @@ else
 
 git clone https://github.com/andersfischernielsen/rEFInd-minimal-black.git /boot/efi/EFI/refind/themes/
 success "installed refind theme"
+
+#######################################
+###			REMOVE PWD FEEDBACK		###
+#######################################
+
+mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled 
+success "removed password feedback"
 
 #######################################
 ###			DESKTOP APPEARANCE		###
