@@ -137,8 +137,8 @@ gsettings set org.cinnamon workspace-expo-view-as-grid false
 # visual settings
 gsettings set org.cinnamon.desktop.wm.preferences focus-mode 'click'
 gsettings set org.cinnamon alttab-switcher-style 'icons+preview'
-gsettings set org.cinnamon panels-autohide "['1,true']"
-gsettings set org.cinnamon panels-height "['1,30']"
+gsettings set org.cinnamon panels-autohide "['1:true']"
+gsettings set org.cinnamon panels-height "['1:30']"
 gsettings set org.cinnamon startup-animation false
 success "workspace settings updated"
 
