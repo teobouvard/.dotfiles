@@ -12,7 +12,7 @@ info() {
 	tput setaf 7
 	printf "] "
  	echo $*	
-	tput reset
+	tput sgr0
 }
 
 success() {
@@ -23,7 +23,7 @@ success() {
 	tput setaf 7
 	printf "] "
 	echo $*	
-	tput reset
+	tput sgr0
 }
 
 error() {
@@ -34,7 +34,7 @@ error() {
 	tput setaf 7
 	printf "] "
 	echo $*	
-	tput reset
+	tput sgr0
 }
 
 #######################################
