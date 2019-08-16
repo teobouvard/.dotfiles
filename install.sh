@@ -73,8 +73,12 @@ success "installed refind theme"
 ###     REMOVE PWD FEEDBACK         ###
 #######################################
 
-sudo mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled 
-success "removed password feedback"
+if [ -f /etc/sudoers.d/0pwfeedback ];
+	then sudo mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled 
+	success "removed password feedback"
+else 
+	info "no password feedback"
+fi
 
 #######################################
 ###     DESKTOP APPEARANCE          ###
