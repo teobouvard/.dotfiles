@@ -35,17 +35,6 @@ error() {
 }
 
 #######################################
-###     CHECK PRIVILEGES            ###
-#######################################
-
-if (( $EUID > 0 ));
-	then error "please run as root"
-    exit
-else 
-	success "root privileges checked"
-fi
-
-#######################################
 ###     INSTALL PACKAGES            ###
 #######################################
 
