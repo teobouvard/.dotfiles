@@ -56,8 +56,8 @@ success "packages installed"
 ###     INSTALL ZSH SHELL           ###
 #######################################
 
-su -c 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended' $USER
-su -c 'chsh -s $(which zsh)' $USER
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
+chsh -s $(which zsh)
 success "Oh My Zsh installed"
 
 #######################################
@@ -65,7 +65,7 @@ success "Oh My Zsh installed"
 #######################################
 
 # Neutron, Oceanic Next, Pencil Dark
-su -c 'bash -c  "$(wget -qO- https://git.io/vQgMr)"' $USER
+bash -c  "$(wget -qO- https://git.io/vQgMr)"
 
 #######################################
 ###     INSTALL REFIND              ###
@@ -99,7 +99,7 @@ success "removed password feedback"
 mkdir -p $HOME/Pictures/Wallpapers/
 curl --output $HOME/Pictures/Wallpapers/dragon.jpg https://www.nasa.gov/sites/default/files/thumbnails/image/iss058e027197.jpg
 curl --output $HOME/Pictures/Wallpapers/flow.jpg https://dubaiastronomy.com/wp-content/uploads/2019/04/art-artistic-background-1020315.jpg
-su -c 'gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/Wallpapers/dragon.jpg"' $USER
+gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/Wallpapers/dragon.jpg"
 success "desktop is set up"
 
 #######################################
@@ -110,36 +110,35 @@ apt-add-repository ppa:tista/adapta -y
 apt-get update
 apt-get install -y adapta-gtk-theme
 
-su -c "gsettings set org.cinnamon.desktop.wm.preferences theme 'Adapta-Nokto'" $USER
-su -c "gsettings set org.cinnamon.theme name 'Adapta-Nokto'" $USER
-su -c "gsettings set org.cinnamon.desktop.interface gtk-theme 'Adapta-Nokto'" $USER
-su -c "gsettings set org.cinnamon.desktop.interface icon-theme 'Mint-Y-Grey'" $USER
+gsettings set org.cinnamon.desktop.wm.preferences theme 'Adapta-Nokto'
+gsettings set org.cinnamon.theme name 'Adapta-Nokto'
+gsettings set org.cinnamon.desktop.interface gtk-theme 'Adapta-Nokto'
+gsettings set org.cinnamon.desktop.interface icon-theme 'Mint-Y-Grey'
 
-su -c "gsettings set org.cinnamon.desktop.sound volume-sound-enabled false" $USER
-su -c "gsettings set org.cinnamon.desktop.sound event-sounds false" $USER
+gsettings set org.cinnamon.desktop.sound volume-sound-enabled false
+gsettings set org.cinnamon.desktop.sound event-sounds false
 
-su -c "gsettings set org.nemo.desktop computer-icon-visible false" $USER
-su -c "gsettings set org.nemo.desktop home-icon-visible false" $USER
-su -c "gsettings set org.nemo.desktop trash-icon-visible false" $USER
-su -c "gsettings set org.nemo.desktop network-icon-visible false" $USER
-su -c "gsettings set org.nemo.desktop volumes-visible false" $USER
+gsettings set org.nemo.desktop computer-icon-visible false
+gsettings set org.nemo.desktop home-icon-visible false
+gsettings set org.nemo.desktop trash-icon-visible false
+gsettings set org.nemo.desktop network-icon-visible false
+gsettings set org.nemo.desktop volumes-visible false
 
-su -c "gsettings set org.cinnamon.desktop.wm.preferences focus-mode 'sloppy'" $USER
-su -c "gsettings set org.cinnamon alttab-switcher-style 'icons+preview'" $USER
-su -c "gsettings set org.cinnamon panels-autohide ['1,true']" $USER
-su -c "gsettings set org.cinnamon panels-height ['1,30']" $USER
-su -c "gsettings set org.cinnamon startup-animation false" $USER
+gsettings set org.cinnamon.desktop.wm.preferences focus-mode 'sloppy'
+gsettings set org.cinnamon alttab-switcher-style 'icons+preview'
+gsettings set org.cinnamon panels-autohide ['1,true']
+gsettings set org.cinnamon panels-height ['1,30']
+gsettings set org.cinnamon startup-animation false
 
 #######################################
 ###     SET UP GIT                  ###
 #######################################
 
-su -c 'git config --global user.email "teobouvard@gmail.com"' $USER
-su -c 'git config --global user.name "Téo Bouvard"' $USER
-su -c 'git config --global credential.helper store' $USER
-su -c 'git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)" --all"' $USER
-success "git is set up"
-
+git config --global user.email "teobouvard@gmail.com"
+git config --global user.name "Téo Bouvard"
+git config --global credential.helper store
+git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+success "git is set up" 
 #######################################
 ###     SYMLINKS                    ###
 #######################################
