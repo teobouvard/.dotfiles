@@ -29,6 +29,6 @@ sudo wget -qO /Library/User\ Pictures/flow.jpg https://dubaiastronomy.com/wp-con
 osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Library/User Pictures/dragon.jpg" '
 success "changed desktop image"
 
-dscl . delete /Users/$(whoami) JPEGPhoto
-dscl . create /Users/$(whoami) Picture "/Library/User Pictures/flow.jpg"
+sudo dscl . delete /Users/$(whoami) JPEGPhoto
+sudo dscl . create /Users/$(whoami) Picture "/Library/User Pictures/flow.jpg"
 success "changed user image"
