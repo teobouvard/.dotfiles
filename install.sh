@@ -107,7 +107,7 @@ unzip .local/share/cinnamon/extensions/gtile.zip
 rm .local/share/cinnamon/extensions/cinnamon-maximus.zip
 rm .local/share/cinnamon/extensions/gtile.zip
 gsettings set org.cinnamon enabled-extensions "['gTile@shuairan', '!cinnamon-maximus@fmete']"
-
+success "installed extensions"
 
 #######################################
 ###     WORKSPACE SETTINGS          ###
