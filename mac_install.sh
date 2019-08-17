@@ -4,14 +4,19 @@
 ###     INSTALL HOMEBREW            ###
 #######################################
 
-
-
 if test ! $(which brew); then
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	success "brew installed"
 else
 	info "brew already installed"
 fi
+
+#######################################
+###     INSTALL PACKAGES            ###
+#######################################
+
+brew cask install $(grep -vE "^\s*#" cask_packages  | tr "\n" " ") > /dev/null
+success "packages installed"
 
 #######################################
 ###     INSTALL ZSH SHELL           ###
