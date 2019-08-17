@@ -27,13 +27,6 @@ else
 fi
 
 #######################################
-###     COLOR PALETTE               ###
-#######################################
-
-# Neutron, Oceanic Next, Pencil Dark
-bash -c  "$(wget -qO- https://git.io/vQgMr)"
-
-#######################################
 ###     REMOVE PWD FEEDBACK         ###
 #######################################
 

@@ -37,6 +37,10 @@ error() {
 	tput sgr0
 }
 
+#######################################
+###     PLATFORM DEPENDENT SET UP   ###
+#######################################
+
 case "$OSTYPE" in
 
     darwin*)  
