@@ -32,7 +32,7 @@ fi
 
 ln -sf $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
-if [[ "$SHELL" = "$(which zsh)" ]]; then
+if [[ $SHELL = "$(which zsh)" ]]; then
 	info "zsh is already the default shell"
 else
 	chsh -s $(which zsh)
