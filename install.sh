@@ -38,7 +38,7 @@ error() {
 }
 
 #######################################
-###     PLATFORM DEPENDENT SET UP   ###
+###     OS DETECTION                ###
 #######################################
 
 case "$OSTYPE" in
@@ -59,3 +59,15 @@ case "$OSTYPE" in
     ;;
 
 esac
+
+#######################################
+###     GENERATE SSH KEYS           ###
+#######################################
+
+if [[ -f "$HOME/.ssh/id-rsa" ]]; then
+	success "existing SSH keys"
+else
+	info "generating SSH keys"
+	ssh-keygen -t rsa
+	success "SSH key created"
+fi

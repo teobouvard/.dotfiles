@@ -20,18 +20,6 @@ brew install $(grep -vE "^\s*#" brew_packages  | tr "\n" " ") > /dev/null
 success "packages installed"
 
 #######################################
-###     GENERATE SSH KEYS           ###
-#######################################
-
-if [[ -f $HOME/.ssh/id-rsa ]]; then
-	success "existing SSH keys"
-else
-	info "generating SSH keys"
-	ssh-keygen -t rsa
-	success "SSH key created"
-fi
-
-#######################################
 ###     INSTALL ZSH SHELL           ###
 #######################################
 
@@ -43,7 +31,7 @@ else
 	success "Oh My Zsh installed"
 fi
 
-if [[ $SHELL = $(which zsh)]]; then
+if [[ $SHELL = "$(which zsh)" ]]; then
 	info "zsh is already the default shell"
 else
 	chsh -s $(which zsh)

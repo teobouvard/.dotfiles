@@ -19,7 +19,7 @@ else
 	success "Oh My Zsh installed"
 fi
 
-if [[ $SHELL = $(which zsh)]]; then
+if [[ $SHELL = "$(which zsh)" ]]; then
 	info "zsh is already the default shell"
 else
 	chsh -s $(which zsh)
