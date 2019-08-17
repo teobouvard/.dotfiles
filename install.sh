@@ -96,7 +96,7 @@ fi
 #######################################
 
 # Neutron (103)
-info "chnage color palette ?"
+info "change color palette ?"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) bash -c  "$(wget -qO- https://git.io/vQgMr)"; break;;
