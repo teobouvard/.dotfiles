@@ -8,25 +8,6 @@ sudo apt-get -y install $(grep -vE "^\s*#" apt_packages  | tr "\n" " ") > /dev/n
 success "packages installed"
 
 #######################################
-###     INSTALL ZSH SHELL           ###
-#######################################
-
-if [[ -d $HOME/.oh-my-zsh ]]; then
-	git -C $HOME/.oh-my-zsh pull > /dev/null
-	success "Oh My Zsh updated"
-else
-	git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh > /dev/null
-	success "Oh My Zsh installed"
-fi
-
-if [[ $SHELL = "$(which zsh)" ]]; then
-	info "zsh is already the default shell"
-else
-	chsh -s $(which zsh)
-	success "switched default shell to zsh"
-fi
-
-#######################################
 ###     REMOVE PWD FEEDBACK         ###
 #######################################
 
