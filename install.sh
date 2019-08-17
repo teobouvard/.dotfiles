@@ -99,7 +99,7 @@ fi
 info "install color palette [y/n] ?"
 select yn in "y" "n"; do
     case $yn in
-        y ) bash -c  "$(wget -qO- https://git.io/vQgMr)" < '103'; break;;
+        y ) bash -c  "$(wget -qO- https://git.io/vQgMr)" < echo '103'; break;;
         n ) break;;
     esac
 done
