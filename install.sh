@@ -56,7 +56,7 @@ success "Oh My Zsh installed"
 ###     COLOR PALETTE               ###
 #######################################
 
-# Neutron, Oceanic Next, Pencil Dark
+# Neutron, Oceanic Next, Pencil Dark, Nord
 bash -c  "$(wget -qO- https://git.io/vQgMr)"
 
 #######################################
@@ -95,6 +95,19 @@ gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures
 sudo sed -i "s/draw-user.*/draw-user-background=true/g" /etc/lightdm/slick-greeter.conf
 sudo sed -i "s/draw-grid.*/draw-grid=false/g" /etc/lightdm/slick-greeter.conf
 success "desktop is set up"
+
+#######################################
+###     EXTENSIONS                  ###
+#######################################
+
+sudo wget -O .local/share/cinnamon/extensions/cinnamon-maximus.zip https://cinnamon-spices.linuxmint.com/files/extensions/cinnamon-maximus@fmete.zip
+sudo wget -O .local/share/cinnamon/extensions/gtile.zip https://cinnamon-spices.linuxmint.com/files/extensions/gTile@shuairan.zip
+unzip .local/share/cinnamon/extensions/cinnamon-maximus.zip
+unzip .local/share/cinnamon/extensions/gtile.zip
+rm .local/share/cinnamon/extensions/cinnamon-maximus.zip
+rm .local/share/cinnamon/extensions/gtile.zip
+gsettings set org.cinnamon enabled-extensions "['gTile@shuairan', '!cinnamon-maximus@fmete']"
+
 
 #######################################
 ###     WORKSPACE SETTINGS          ###
