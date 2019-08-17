@@ -30,6 +30,12 @@ else
 	success "Oh My Zsh installed"
 fi
 
-chsh -s $(which zsh)
-success "switched default shell"
+ln -sf $HOME/.dotfiles/.zshrc $HOME/.zshrc
+
+if [[ $SHELL = $(which zsh)]]; then
+	info "zsh is already the default shell"
+else
+	chsh -s $(which zsh)
+	success "switched default shell to zsh"
+fi
 
