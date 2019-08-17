@@ -12,14 +12,14 @@ success "packages installed"
 #######################################
 
 if [[ -d $HOME/.oh-my-zsh ]]; then
-	git pull $HOME/.oh-my-zsh > /dev/null
+	git pull --allow-unrelated-histories $HOME/.oh-my-zsh > /dev/null
 	success "Oh My Zsh updated"
 else
 	git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh > /dev/null
 	success "Oh My Zsh installed"
 fi
 
-sudo chsh -s $(which zsh)
+chsh -s $(which zsh)
 success "switched default shell"
 
 #######################################
