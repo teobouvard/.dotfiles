@@ -63,8 +63,8 @@ bash -c  "$(wget -qO- https://git.io/vQgMr)"
 ###     INSTALL REFIND              ###
 #######################################
 
-sudo apt-add-repository -y ppa:rodsmith/refind > /dev/null
-sudo apt-get update > /dev/null
+sudo apt-add-repository -y ppa:rodsmith/refind
+sudo apt-get update
 sudo apt-get -y install refind
 sudo refind-install
 success "installed refind"
@@ -88,8 +88,8 @@ fi
 #######################################
 
 mkdir -p $HOME/Pictures/Wallpapers/
-sudo wget -O $HOME/Pictures/Wallpapers/dragon.jpg https://www.nasa.gov/sites/default/files/thumbnails/image/iss058e027197.jpg
-sudo wget -O $HOME/Pictures/Wallpapers/flow.jpg https://dubaiastronomy.com/wp-content/uploads/2019/04/art-artistic-background-1020315.jpg
+sudo wget -qO $HOME/Pictures/Wallpapers/dragon.jpg https://www.nasa.gov/sites/default/files/thumbnails/image/iss058e027197.jpg
+sudo wget -qO $HOME/Pictures/Wallpapers/flow.jpg https://dubaiastronomy.com/wp-content/uploads/2019/04/art-artistic-background-1020315.jpg
 gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/Wallpapers/dragon.jpg"
 
 sudo sed -i "s/draw-user.*/draw-user-background=true/g" /etc/lightdm/slick-greeter.conf
@@ -100,8 +100,8 @@ success "desktop is set up"
 ###     EXTENSIONS                  ###
 #######################################
 
-sudo wget -O $HOME/.local/share/cinnamon/extensions/ https://cinnamon-spices.linuxmint.com/files/extensions/cinnamon-maximus@fmete.zip
-sudo wget -O $HOME/.local/share/cinnamon/extensions/ https://cinnamon-spices.linuxmint.com/files/extensions/gTile@shuairan.zip
+sudo wget -qP $HOME/.local/share/cinnamon/extensions/ https://cinnamon-spices.linuxmint.com/files/extensions/cinnamon-maximus@fmete.zip
+sudo wget -qP $HOME/.local/share/cinnamon/extensions/ https://cinnamon-spices.linuxmint.com/files/extensions/gTile@shuairan.zip
 unzip $HOME/.local/share/cinnamon/extensions/*.zip
 rm $HOME/.local/share/cinnamon/extensions/*.zip
 gsettings set org.cinnamon enabled-extensions "['gTile@shuairan', '!cinnamon-maximus@fmete']"
