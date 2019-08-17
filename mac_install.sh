@@ -16,6 +16,7 @@ fi
 #######################################
 
 brew cask install $(grep -vE "^\s*#" cask_packages  | tr "\n" " ") > /dev/null
+brew install $(grep -vE "^\s*#" brew_packages  | tr "\n" " ") > /dev/null
 success "packages installed"
 
 #######################################
