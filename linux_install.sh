@@ -12,7 +12,7 @@ success "packages installed"
 #######################################
 
 if [[ -d $HOME/.oh-my-zsh ]]; then
-	git pull --allow-unrelated-histories $HOME/.oh-my-zsh > /dev/null
+	git -C $HOME/.oh-my-zsh pull > /dev/null
 	success "Oh My Zsh updated"
 else
 	git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh > /dev/null
