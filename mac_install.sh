@@ -39,3 +39,9 @@ else
 	success "switched default shell to zsh"
 fi
 
+#######################################
+###     COLOR PALETTE               ###
+#######################################
+
+# Neutron, Oceanic Next, Pencil Dark
+bash -c  "$(wget -qO- https://git.io/vQgMr)"
