@@ -173,6 +173,6 @@ ranger --copy-config=rifle
 ###     SYMLINKS                    ###
 #######################################
 
-ln -sf .dotfiles/.zshrc $HOME/.zshrc
-ln -sf .dotfiles/.tmux.conf $HOME/.tmux.conf
+ln -sf $HOME/.dotfiles/.zshrc $HOME/.zshrc
+ln -sf $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
 success "symlinks created"

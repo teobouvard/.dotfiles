@@ -9,5 +9,5 @@ cd .dotfiles
 ```
 
 ## TODO
-create terminal profile
-change gTile hotkey
+* create terminal profile 
+* change gTile hotkey  
