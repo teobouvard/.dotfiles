@@ -164,6 +164,12 @@ git config --global alias.lg "log --graph --abbrev-commit --decorate --format=fo
 success "git settings updated" 
 
 #######################################
+###     SET UP RANGER               ###
+#######################################
+
+ranger --copy-config=rifle
+
+#######################################
 ###     SYMLINKS                    ###
 #######################################
 
