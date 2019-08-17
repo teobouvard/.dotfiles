@@ -64,7 +64,7 @@ esac
 ###     GENERATE SSH KEYS           ###
 #######################################
 
-if [[ -f "$HOME/.ssh/id-rsa" ]]; then
+if [[ -f "$HOME/.ssh/id_rsa" ]]; then
 	success "existing SSH keys"
 else
 	info "generating SSH keys"
