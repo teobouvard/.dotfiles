@@ -60,19 +60,6 @@ success "Oh My Zsh installed"
 bash -c  "$(wget -qO- https://git.io/vQgMr)"
 
 #######################################
-###     INSTALL REFIND              ###
-#######################################
-
-sudo apt-add-repository -y ppa:rodsmith/refind
-sudo apt-get update
-sudo apt-get -y install refind
-sudo refind-install
-success "installed refind"
-
-sudo git-force-clone https://github.com/andersfischernielsen/rEFInd-minimal-black.git /boot/efi/EFI/refind/themes/
-success "installed refind theme"
-
-#######################################
 ###     REMOVE PWD FEEDBACK         ###
 #######################################
 
