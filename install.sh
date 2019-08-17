@@ -90,3 +90,16 @@ else
 	chsh -s $(which zsh)
 	success "switched default shell to zsh"
 fi
+
+#######################################
+###     COLOR PALETTE               ###
+#######################################
+
+# Neutron (103)
+info "install color palette [y/n] ?"
+select yn in "y" "n"; do
+    case $yn in
+        y ) bash -c  "$(wget -qO- https://git.io/vQgMr)" < '103'; break;;
+        n ) break;;
+    esac
+done
