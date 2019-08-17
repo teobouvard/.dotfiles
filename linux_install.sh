@@ -11,9 +11,16 @@ success "packages installed"
 ###     INSTALL ZSH SHELL           ###
 #######################################
 
-sudo git-force-clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh > /dev/null
+if [[ -d $HOME/.oh-my-zsh ]]; then
+	git pull $HOME/.oh-my-zsh > /dev/null
+	success "Oh My Zsh updated"
+else
+	git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh > /dev/null
+	success "Oh My Zsh installed"
+fi
+
 sudo chsh -s $(which zsh)
-success "Oh My Zsh installed"
+success "switched default shell"
 
 #######################################
 ###     COLOR PALETTE               ###
@@ -26,8 +33,8 @@ bash -c  "$(wget -qO- https://git.io/vQgMr)"
 ###     REMOVE PWD FEEDBACK         ###
 #######################################
 
-if [ -f /etc/sudoers.d/0pwfeedback ];
-	then sudo mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled 
+if [ -f /etc/sudoers.d/0pwfeedback ]; then 
+	sudo mv /etc/sudoers.d/0pwfeedback /etc/sudoers.d/0pwfeedback.disabled 
 	success "removed password feedback"
 else 
 	info "no password feedback"
