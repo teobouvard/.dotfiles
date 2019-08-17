@@ -96,10 +96,10 @@ fi
 #######################################
 
 # Neutron (103)
-info "install color palette [y/n] ?"
+info "chnage color palette ?"
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) bash -c  "$(wget -qO- https://git.io/vQgMr)"; break;;
-        No ) break;;
+        No  ) break;;
     esac
 done

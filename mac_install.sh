@@ -23,7 +23,7 @@ success "packages installed"
 ###     DESKTOP APPEARANCE          ###
 #######################################
 
-sudo wget -qO /Library/Desktop Pictures/dragon.jpg https://www.nasa.gov/sites/default/files/thumbnails/image/iss058e027197.jpg
-sudo wget -qO /Library/Desktop Pictures/flow.jpg https://dubaiastronomy.com/wp-content/uploads/2019/04/art-artistic-background-1020315.jpg
+sudo wget -qO /Library/Desktop\ Pictures/dragon.jpg https://www.nasa.gov/sites/default/files/thumbnails/image/iss058e027197.jpg
+sudo wget -qO /Library/Desktop\ Pictures/flow.jpg https://dubaiastronomy.com/wp-content/uploads/2019/04/art-artistic-background-1020315.jpg
 
 osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Library/Desktop Pictures/dragon.jpg" '
