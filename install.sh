@@ -102,8 +102,8 @@ success "desktop is set up"
 
 sudo wget -qP $HOME/.local/share/cinnamon/extensions/ https://cinnamon-spices.linuxmint.com/files/extensions/cinnamon-maximus@fmete.zip
 sudo wget -qP $HOME/.local/share/cinnamon/extensions/ https://cinnamon-spices.linuxmint.com/files/extensions/gTile@shuairan.zip
-unzip $HOME/.local/share/cinnamon/extensions/*.zip
-rm $HOME/.local/share/cinnamon/extensions/*.zip
+unzip $HOME/.local/share/cinnamon/extensions/\*.zip
+rm -f $HOME/.local/share/cinnamon/extensions/\*.zip
 gsettings set org.cinnamon enabled-extensions "['gTile@shuairan', '!cinnamon-maximus@fmete']"
 success "installed extensions"
 
