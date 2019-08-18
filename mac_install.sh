@@ -1,6 +1,8 @@
 #!/bin/bash
 
 xcode-select --install
+sudo systemsetup -setremotelogin on
+sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
 
 #######################################
 ###     INSTALL HOMEBREW            ###
