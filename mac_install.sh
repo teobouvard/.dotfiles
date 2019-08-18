@@ -1,5 +1,7 @@
 #!/bin/bash
 
+xcode-select --install
+
 #######################################
 ###     INSTALL HOMEBREW            ###
 #######################################
@@ -126,6 +128,7 @@ defaults write com.apple.finder ShowPathbar -bool true
 
 # Completely Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
+sudo nvram SystemAudioVolume=" " #(%80, %01, %00, " ")
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
