@@ -1,8 +1,13 @@
 #!/bin/bash
 
+#######################################
+###     INSTALL DEV TOOLS           ###
+#######################################
+
 xcode-select --install
-sudo systemsetup -setremotelogin on
 sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
+sudo systemsetup -setremotelogin on
+success "installed dev tools"
 
 #######################################
 ###     INSTALL HOMEBREW            ###
@@ -13,6 +18,7 @@ if test ! $(which brew); then
 	success "brew installed"
 else
 	info "brew already installed"
+	brew update
 fi
 
 #######################################
@@ -75,12 +81,15 @@ defaults write com.apple.dock autohide-delay -float 0
 # System Preferences > Dock > Show indicators for open applications
 defaults write com.apple.dock show-process-indicators -bool true
 
+# System Preferences > Dock > Show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-# System Preferences > Mission Controll > Automatically rearrange Spaces based on most recent use
+# System Preferences > Mission Contol > Automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
-# System Preferences > Mission Controll > Dashboard
+# System Preferences > Mission Contol > Dashboard
 defaults write com.apple.dock dashboard-in-overlay -bool true
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -112,7 +121,7 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -bool
 # Finder > Preferences > Show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Finder > Preferences > Show wraning before changing an extension
+# Finder > Preferences > Show warning before changing an extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Finder > Preferences > Show wraning before removing from iCloud Drive
