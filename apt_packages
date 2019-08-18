@@ -4,12 +4,13 @@ vim
 tmux
 ranger
 python3-pip
+neomutt
 snap
 git
-pqiv
 nmap
 screenfetch
 chromium-browser
+firefox
 # necessary packages for Gogh color palette
 dconf-cli
 uuid-runtime

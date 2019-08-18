@@ -1,4 +1,7 @@
 wget
 ranger
 openssh
-mutt
+neomutt
+pass
+isync
+msmtp

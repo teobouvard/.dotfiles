@@ -61,7 +61,7 @@ case "$OSTYPE" in
 esac
 
 #######################################
-###     GENERATE SSH KEYS           ###
+###     GENERATE  KEYS              ###
 #######################################
 
 if [[ -f "$HOME/.ssh/id_rsa" ]]; then
@@ -107,9 +107,11 @@ success "git settings updated"
 ###     SET UP MUTT                 ###
 #######################################
 
-mkdir -p $HOME/.mutt/cache
-ln -sf $HOME/.dotfiles/.muttrc $HOME/.muttrc
-success "mutt settings updated"
+git clone https://github.com/LukeSmithxyz/mutt-wizard
+cd mutt-wizard
+sudo make install
+cd ..
+rm -rf mutt-wizard
 
 #######################################
 ###     COLOR PALETTE               ###

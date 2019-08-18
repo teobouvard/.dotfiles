@@ -11,3 +11,4 @@ cd .dotfiles
 ## TODO
 * create terminal profile 
 * change gTile hotkey  
+* add mutt wizard ?

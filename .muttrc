@@ -1,22 +1,22 @@
-# About Me
+# profile
 set from = "teo.bouvard@insa-lyon.fr"
 set realname = "Téo Bouvard"
 
-# My credentials
+# credentials
 set imap_user = "tbouvard@insa-lyon.fr"
 set imap_pass = ""
 
-# My mailboxes
+# mailboxes
 set folder = "imaps://zmail.insa-lyon.fr:993"
 set spoolfile = "+INBOX"
 
 
-# Where to put the stuff
+# cache folders
 set header_cache = "~/.mutt/cache/headers"
 set message_cachedir = "~/.mutt/cache/bodies"
 set certificate_file = "~/.mutt/certificates"
 
-# Etc
+# etc
 set mail_check = 30
 set move = no
 set imap_keepalive = 900
