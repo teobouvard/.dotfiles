@@ -5,8 +5,17 @@
 #######################################
 
 xcode-select --install
-sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
+
+info "fix missing headers ?"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /; break;;
+        No  ) break;;
+    esac
+done
+
 sudo systemsetup -setremotelogin on
+
 success "installed dev tools"
 
 #######################################
@@ -25,8 +34,8 @@ fi
 ###     INSTALL PACKAGES            ###
 #######################################
 
-brew cask install $(grep -vE "^\s*#" cask_packages  | tr "\n" " ") > /dev/null
-brew install $(grep -vE "^\s*#" brew_packages  | tr "\n" " ") > /dev/null
+brew cask install $(grep -vE "^\s*#" packages/cask_packages  | tr "\n" " ") > /dev/null
+brew install $(grep -vE "^\s*#" packages/brew_packages  | tr "\n" " ") > /dev/null
 success "packages installed"
 
 #######################################

@@ -4,7 +4,7 @@
 ###     INSTALL PACKAGES            ###
 #######################################
 
-sudo apt-get -y install $(grep -vE "^\s*#" apt_packages  | tr "\n" " ") > /dev/null
+sudo apt-get -y install $(grep -vE "^\s*#" packages/apt_packages  | tr "\n" " ") > /dev/null
 success "packages installed"
 
 #######################################
@@ -97,7 +97,6 @@ ranger --copy-config=rifle
 #######################################
 ###     SYMLINKS                    ###
 #######################################
-
 
 ln -sf $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
 success "symlinks created"
