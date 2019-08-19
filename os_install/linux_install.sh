@@ -5,6 +5,7 @@
 #######################################
 
 sudo apt-get -y install $(grep -vE "^\s*#" packages/apt_packages  | tr "\n" " ") > /dev/null
+snap install $(grep -vE "^\s*#" packages/snap_packages  | tr "\n" " ") --classic > /dev/null
 success "packages installed"
 
 #######################################
@@ -23,8 +24,8 @@ fi
 #######################################
 
 mkdir -p $HOME/Pictures/Wallpapers/
-sudo wget -qO $HOME/Pictures/Wallpapers/dragon.jpg https://www.nasa.gov/sites/default/files/thumbnails/image/iss058e027197.jpg
-sudo wget -qO $HOME/Pictures/Wallpapers/flow.jpg https://dubaiastronomy.com/wp-content/uploads/2019/04/art-artistic-background-1020315.jpg
+sudo wget -O $HOME/Pictures/Wallpapers/dragon.jpg https://www.nasa.gov/sites/default/files/thumbnails/image/iss058e027197.jpg
+sudo wget -O $HOME/Pictures/Wallpapers/flow.jpg https://dubaiastronomy.com/wp-content/uploads/2019/04/art-artistic-background-1020315.jpg
 gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/Wallpapers/dragon.jpg"
 
 sudo sed -i "s/draw-user.*/draw-user-background=true/g" /etc/lightdm/slick-greeter.conf
@@ -35,9 +36,9 @@ success "desktop is set up"
 ###     EXTENSIONS                  ###
 #######################################
 
-sudo wget -qP $HOME/.local/share/cinnamon/extensions/ https://cinnamon-spices.linuxmint.com/files/extensions/cinnamon-maximus@fmete.zip
-sudo wget -qP $HOME/.local/share/cinnamon/extensions/ https://cinnamon-spices.linuxmint.com/files/extensions/gTile@shuairan.zip
-unzip $HOME/.local/share/cinnamon/extensions/\*.zip
+sudo wget -P $HOME/.local/share/cinnamon/extensions/ https://cinnamon-spices.linuxmint.com/files/extensions/cinnamon-maximus@fmete.zip
+sudo wget -P $HOME/.local/share/cinnamon/extensions/ https://cinnamon-spices.linuxmint.com/files/extensions/gTile@shuairan.zip
+unzip $HOME/.local/share/cinnamon/extensions/\*.zip -d $HOME/.local/share/cinnamon/extensions/
 rm -f $HOME/.local/share/cinnamon/extensions/\*.zip
 gsettings set org.cinnamon enabled-extensions "['gTile@shuairan', '!cinnamon-maximus@fmete']"
 success "installed extensions"
@@ -98,5 +99,5 @@ ranger --copy-config=rifle
 ###     SYMLINKS                    ###
 #######################################
 
-ln -sf $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
+ln -sf $HOME/.dotfiles/config/.tmux.conf $HOME/.tmux.conf
 success "symlinks created"

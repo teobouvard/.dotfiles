@@ -45,12 +45,12 @@ case "$OSTYPE" in
 
     darwin*)  
         success "detected OS : macOS" 
-        source ./mac_install.sh
+        source os_install/mac_install.sh
     ;; 
 
     linux*)
         success "detected OS : Linux"
-        source ./linux_install.sh
+        source os_install/linux_install.sh
     ;;
 
     *)
@@ -91,7 +91,7 @@ else
 	success "switched default shell to zsh"
 fi
 
-ln -sf $HOME/.dotfiles/.zshrc $HOME/.zshrc
+ln -sf $HOME/.dotfiles/config/.zshrc $HOME/.zshrc
 
 #######################################
 ###     SET UP GIT                  ###
