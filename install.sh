@@ -91,7 +91,7 @@ else
 	success "switched default shell to zsh"
 fi
 
-ln -sf $HOME/.dotfiles/config/.zshrc $HOME/.zshrc
+ln -sf $HOME/.dotfiles/config/zsh $HOME/.zshrc
 
 #######################################
 ###     SET UP GIT                  ###

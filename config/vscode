@@ -1,0 +1,8 @@
+{
+    "git.enableSmartCommit": true,
+    "git.postCommitCommand": "sync",
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "editor.fontSize": 12,
+    "window.zoomLevel": -0.4
+}

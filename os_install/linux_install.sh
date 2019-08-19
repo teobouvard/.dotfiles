@@ -90,14 +90,10 @@ gsettings set org.cinnamon startup-animation false
 success "workspace settings updated"
 
 #######################################
-###     SET UP RANGER               ###
-#######################################
-
-ranger --copy-config=rifle
-
-#######################################
 ###     SYMLINKS                    ###
 #######################################
 
-ln -sf $HOME/.dotfiles/config/.tmux.conf $HOME/.tmux.conf
+ln -sf $HOME/.dotfiles/config/tmux $HOME/.tmux.conf
+ln -sf $HOME/.dotfiles/config/vscode $HOME/.config/Code/User/settings.json
+
 success "symlinks created"
