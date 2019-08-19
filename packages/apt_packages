@@ -10,7 +10,6 @@ git
 nmap
 screenfetch
 chromium-browser
-firefox
 # necessary packages for Gogh color palette
 dconf-cli
 uuid-runtime
