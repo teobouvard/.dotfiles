@@ -94,5 +94,5 @@ export LC_ALL=en_US.UTF-8
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-source .dotfiles/aliases
-source .dotfiles/exports
+source $HOME/.dotfiles/aliases
+source $HOME/.dotfiles/exports
