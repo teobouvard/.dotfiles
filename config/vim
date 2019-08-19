@@ -1,0 +1,11 @@
+" Enable mouse control
+set mouse=a
+
+" Enable syntax highlighting
+syntax enable
+
+" Enable line numbering
+set number
+
+" Match brackets
+set showmatch

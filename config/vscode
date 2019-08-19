@@ -1,8 +1,12 @@
 {
+    // Git settings
     "git.enableSmartCommit": true,
     "git.postCommitCommand": "sync",
     "git.confirmSync": false,
     "git.autofetch": true,
+
+    // Editor settings
     "editor.fontSize": 12,
-    "window.zoomLevel": -0.4
+    "window.zoomLevel": -0.4,
+    "workbench.startupEditor": "newUntitledFile"
 }
