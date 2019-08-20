@@ -72,6 +72,14 @@ else
 	success "SSH key created"
 fi
 
+if test -n "$(find $HOME/.gnupg -maxdepth 1 -name 'private-keys*q' -print -quit)"; then 
+	success "existing GPG keys"
+else
+	info "generating GPG keys"
+	gpg --full-generate-key
+	success "GPG key created"
+fi
+
 #######################################
 ###     INSTALL ZSH SHELL           ###
 #######################################
