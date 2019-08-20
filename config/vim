@@ -9,3 +9,6 @@ set number
 
 " Match brackets
 set showmatch
+
+" Enable search highlighting
+set hlsearch

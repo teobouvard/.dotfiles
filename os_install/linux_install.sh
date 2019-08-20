@@ -87,6 +87,11 @@ gsettings set org.cinnamon alttab-switcher-style 'icons+preview'
 gsettings set org.cinnamon panels-autohide "['1:true']"
 gsettings set org.cinnamon panels-height "['1:30']"
 gsettings set org.cinnamon startup-animation false
+
+# keyboard settings
+
+gsettings set org.cinnamon.settings-daemon.peripherals.keyboard repeat-interval 20
+gsettings set org.cinnamon.settings-daemon.peripherals.keyboard delay 250
 success "workspace settings updated"
 
 #######################################

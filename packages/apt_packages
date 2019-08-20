@@ -5,6 +5,10 @@ tmux
 ranger
 python3-pip
 
+# latex
+texlive
+latexmk
+
 # mail
 neomutt
 pass

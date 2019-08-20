@@ -14,4 +14,4 @@ cd .dotfiles
 ## TODO
 * create terminal profile 
 * change gTile hotkey  
-* add vscode settings
+* add ranger image and pdf preview
