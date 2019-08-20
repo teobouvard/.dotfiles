@@ -3,7 +3,12 @@ htop
 vim
 tmux
 ranger
+
+# dev
 python3-pip
+g++
+ruby-full 
+build-essential
 
 # latex
 texlive
