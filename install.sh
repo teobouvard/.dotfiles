@@ -72,6 +72,14 @@ else
 	success "SSH key created"
 fi
 
+if test -n "$(find $HOME/.gnupg -maxdepth 1 -name 'private-keys*q' -print -quit)"; then 
+	success "existing GPG keys"
+else
+	info "generating GPG keys"
+	gpg --full-generate-key
+	success "GPG key created"
+fi
+
 #######################################
 ###     INSTALL ZSH SHELL           ###
 #######################################
@@ -99,7 +107,8 @@ ln -sf $HOME/.dotfiles/config/zsh $HOME/.zshrc
 
 git config --global user.email "teobouvard@gmail.com"
 git config --global user.name "Téo Bouvard"
-git config --global credential.helper store
+git config --global commit.gpgsign true
+
 git config --global alias.lg "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 success "git settings updated" 
 
