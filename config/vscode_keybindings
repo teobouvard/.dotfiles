@@ -1,0 +1,16 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+[Comma]",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+[Period]",
+        "command": "workbench.action.focusActiveEditorGroup"
+    },
+    {
+        "key": "ctrl+[Period]",
+        "command": "-breadcrumbs.focus",
+        "when": "breadcrumbsPossible"
+    }
+]

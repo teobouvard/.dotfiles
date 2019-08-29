@@ -99,7 +99,8 @@ success "workspace settings updated"
 #######################################
 
 ln -sf $HOME/.dotfiles/config/tmux $HOME/.tmux.conf
-ln -sf $HOME/.dotfiles/config/vscode $HOME/.config/Code/User/settings.json
+ln -sf $HOME/.dotfiles/config/vscode_settings $HOME/.config/Code/User/settings.json
+ln -sf $HOME/.dotfiles/config/vscode_keybindings $HOME/.config/Code/User/keybindings.json
 ln -sf $HOME/.dotfiles/config/vim $HOME/.vimrc
 
 success "symlinks created"

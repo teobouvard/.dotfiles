@@ -72,7 +72,7 @@ else
 	success "SSH key created"
 fi
 
-if test -n "$(find $HOME/.gnupg -maxdepth 1 -name 'private-keys*q' -print -quit)"; then 
+if [[ -f $HOME/.gnupg/gpg_pub.asc ]]; then 
 	success "existing GPG keys"
 else
 	info "generating GPG keys"

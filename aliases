@@ -1,2 +1,4 @@
 alias r="ranger"
 alias w="chromium-browser"
+alias uis="cd $HOME/dev/uis"
+alias dot="cd $HOME/.dotfiles"
