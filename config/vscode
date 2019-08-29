@@ -5,10 +5,16 @@
     "git.confirmSync": false,
     "git.autofetch": true,
 
-    // Editor settings
-    "editor.fontSize": 12,
-    "window.zoomLevel": -0.4,
+    "window.zoomLevel": 0,
     "workbench.startupEditor": "newUntitledFile",
+
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/data/*/**": true
+    },
+
     "latex-workshop.message.update.show": false,
     "latex-workshop.view.pdf.viewer": "tab"
 }
