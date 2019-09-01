@@ -4,7 +4,9 @@ This is a framework I use to set up my personal linux environment. Take a look a
   
   
 ```shell
-cd 
+cd
+dpkg --configure -a
+sudo apt-get upgrade 
 sudo apt-get -y install git
 git clone https://github.com/teobouvard/.dotfiles.git
 cd .dotfiles
