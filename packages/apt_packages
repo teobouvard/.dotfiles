@@ -3,7 +3,7 @@ htop
 vim
 tmux
 ranger
-unclutter
+imwheel
 
 # dev
 python3-pip
@@ -30,3 +30,5 @@ chromium-browser
 # necessary packages for Gogh color palette
 dconf-cli
 uuid-runtime
+openssh-client
+openssh-server
