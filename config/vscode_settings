@@ -7,8 +7,12 @@
 
     // Editor settings
     "editor.fontSize": 12,
-    "window.zoomLevel": -0.4,
+    "window.zoomLevel": -1,
     "workbench.startupEditor": "newUntitledFile",
     "latex-workshop.message.update.show": false,
-    "latex-workshop.view.pdf.viewer": "tab"
+    "latex-workshop.view.pdf.viewer": "tab",
+    "markdown-pdf.displayHeaderFooter": false,
+    "markdown-pdf.highlightStyle": "atelier-heath-dark.css",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "terminal.integrated.rendererType": "dom"
 }
