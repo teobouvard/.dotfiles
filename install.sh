@@ -72,7 +72,7 @@ else
 	success "SSH key created"
 fi
 
-if [[ -f $HOME/.gnupg/gpg_pub.asc ]]; then 
+if [[ -d $HOME/.gnupg/ ]]; then 
 	success "existing GPG keys"
 else
 	info "generating GPG keys"
