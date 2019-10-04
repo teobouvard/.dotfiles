@@ -17,8 +17,8 @@
 
     "latex-workshop.message.update.show": false,
     "latex-workshop.view.pdf.viewer": "tab",
-    "markdown-pdf.displayHeaderFooter": false,
-    "markdown-pdf.highlightStyle": "atelier-heath-dark.css",
+    "latex-workshop.intellisense.package.enabled": true,
     "latex-workshop.latex.autoClean.run": "onBuilt",
-    "terminal.integrated.rendererType": "dom"
+    "editor.multiCursorModifier": "ctrlCmd",
+    "[python]": {}
 }
