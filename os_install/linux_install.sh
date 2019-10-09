@@ -92,6 +92,10 @@ gsettings set org.cinnamon startup-animation false
 
 gsettings set org.cinnamon.settings-daemon.peripherals.keyboard repeat-interval 20
 gsettings set org.cinnamon.settings-daemon.peripherals.keyboard delay 250
+
+# disable automount open 
+gsettings set org.cinnamon.desktop.media-handling automount-open false
+
 success "workspace settings updated"
 
 #######################################
