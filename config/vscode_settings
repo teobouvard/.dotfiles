@@ -5,7 +5,7 @@
     "git.confirmSync": false,
     "git.autofetch": true,
 
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "workbench.startupEditor": "newUntitledFile",
 
     "files.watcherExclude": {
@@ -17,8 +17,7 @@
 
     "latex-workshop.message.update.show": false,
     "latex-workshop.view.pdf.viewer": "tab",
-    "markdown-pdf.displayHeaderFooter": false,
-    "markdown-pdf.highlightStyle": "atelier-heath-dark.css",
     "latex-workshop.latex.autoClean.run": "onBuilt",
-    "terminal.integrated.rendererType": "dom"
+    "markdown-pdf.displayHeaderFooter": false,
+    "markdown-pdf.highlightStyle": "nord.css",
 }

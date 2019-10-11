@@ -96,9 +96,3 @@ export LC_ALL=en_US.UTF-8
 
 source $HOME/.dotfiles/aliases
 source $HOME/.dotfiles/exports
-
-export MAIL_DATA="$HOME/Documents/data"
-
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-
