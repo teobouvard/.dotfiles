@@ -1,1 +1,7 @@
 export VISUAL=vim
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+
+# Define user python path
+export PYTHONPATH=$(python3 -c "import site; print(site.USER_SITE)")

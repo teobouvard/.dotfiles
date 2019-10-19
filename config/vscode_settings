@@ -5,7 +5,7 @@
     "git.confirmSync": false,
     "git.autofetch": true,
 
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "workbench.startupEditor": "newUntitledFile",
 
     "files.watcherExclude": {
