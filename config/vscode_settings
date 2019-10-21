@@ -20,9 +20,10 @@
     "latex-workshop.intellisense.package.enabled": true,
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "editor.multiCursorModifier": "ctrlCmd",
-    "[python]": {},
     "markdown-pdf.displayHeaderFooter": false,
-    "markdown-pdf.convertOnSave": true,
+    "restructuredtext.linter.extraArgs": [
+        "--ignore D001"
+    ],
     "peacock.favoriteColors": [
         {
             "name": "Angular Red",
@@ -76,5 +77,10 @@
             "name": "Vue Green",
             "value": "#42b883"
         }
+    ],
+    "autoDocstring.docstringFormat": "google",
+    "C_Cpp.updateChannel": "Insiders",
+    "python.linting.pylintArgs": [
+        "--unsafe-load-any-extension"
     ]
 }
