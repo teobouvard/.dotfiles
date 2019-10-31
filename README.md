@@ -17,3 +17,8 @@ cd .dotfiles
 * create terminal profile 
 * change gTile hotkey  
 * add ranger image and pdf preview
+
+# Configuration checklist
+* SSH
+* ufw
+* Pi-hole

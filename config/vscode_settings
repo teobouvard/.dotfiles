@@ -22,7 +22,10 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "[python]": {},
     "markdown-pdf.displayHeaderFooter": false,
-    "markdown-pdf.convertOnSave": true,
+    "python.formatting.autopep8Args": [
+        "--max-line-length",
+        "120"
+    ],
     "peacock.favoriteColors": [
         {
             "name": "Angular Red",
@@ -76,5 +79,17 @@
             "name": "Vue Green",
             "value": "#42b883"
         }
-    ]
+    ],
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c11",
+    "C_Cpp.default.intelliSenseMode": "gcc-x86",
+    "C_Cpp.updateChannel": "Insiders",
+    "C_Cpp.default.systemIncludePath": [
+        "/usr/include"
+    ],
+    "C_Cpp.default.browse.limitSymbolsToIncludedHeaders": false,
+    "C_Cpp.default.includePath": [
+        "/usr/include/python3.6m"
+    ],
+    "python.dataScience.askForKernelRestart": false
 }
