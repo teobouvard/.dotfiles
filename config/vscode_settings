@@ -20,11 +20,12 @@
     "latex-workshop.intellisense.package.enabled": true,
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "editor.multiCursorModifier": "ctrlCmd",
-    "[python]": {},
     "markdown-pdf.displayHeaderFooter": false,
     "python.formatting.autopep8Args": [
         "--max-line-length",
         "120"
+    "restructuredtext.linter.extraArgs": [
+        "--ignore D001"
     ],
     "peacock.favoriteColors": [
         {
@@ -92,4 +93,9 @@
         "/usr/include/python3.6m"
     ],
     "python.dataScience.askForKernelRestart": false
+    "autoDocstring.docstringFormat": "google",
+    "C_Cpp.updateChannel": "Insiders",
+    "python.linting.pylintArgs": [
+        "--unsafe-load-any-extension"
+    ]
 }
