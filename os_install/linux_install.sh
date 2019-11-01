@@ -87,6 +87,10 @@ gsettings set org.cinnamon alttab-switcher-style 'icons+preview'
 gsettings set org.cinnamon panels-autohide "['1:true']"
 gsettings set org.cinnamon panels-height "['1:30']"
 gsettings set org.cinnamon startup-animation false
+gsettings set org.cinnamon.desktop-effects false
+gsettings set org.cinnamon.desktop-effects-on-dialogs false
+gsettings set org.cinnamon.desktop-effects-on-menus false
+gsettings set org.cinnamon.enable-vfade false
 
 # keyboard settings
 
