@@ -1,5 +1,4 @@
 alias r="ranger"
-alias w="chromium-browser"
 alias dot="cd $HOME/.dotfiles"
 alias py="python3"
 alias ipy="ipython3"

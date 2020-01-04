@@ -96,3 +96,4 @@ export LC_ALL=en_US.UTF-8
 
 source $HOME/.dotfiles/aliases
 source $HOME/.dotfiles/exports
+source $HOME/.private_exports

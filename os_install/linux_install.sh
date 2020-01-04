@@ -24,8 +24,7 @@ fi
 #######################################
 
 mkdir -p $HOME/Pictures/Wallpapers/
-sudo wget -O $HOME/Pictures/Wallpapers/dragon.jpg "https://www.nasa.gov/sites/default/files/thumbnails/image/iss058e027197.jpg"
-sudo wget -O $HOME/Pictures/Wallpapers/flow.jpg "https://dubaiastronomy.com/wp-content/uploads/2019/04/art-artistic-background-1020315.jpg"
+cp ../Wallpapers/* $HOME/Pictures/Wallpapers/
 gsettings set org.cinnamon.desktop.background picture-uri "file://$HOME/Pictures/Wallpapers/dragon.jpg"
 
 sudo sed -i "s/draw-user.*/draw-user-background=true/g" /etc/lightdm/slick-greeter.conf
@@ -93,7 +92,6 @@ gsettings set org.cinnamon.desktop-effects-on-menus false
 gsettings set org.cinnamon.enable-vfade false
 
 # keyboard settings
-
 gsettings set org.cinnamon.settings-daemon.peripherals.keyboard repeat-interval 20
 gsettings set org.cinnamon.settings-daemon.peripherals.keyboard delay 250
 
@@ -110,5 +108,4 @@ ln -sf $HOME/.dotfiles/config/tmux $HOME/.tmux.conf
 ln -sf $HOME/.dotfiles/config/vscode_settings $HOME/.config/Code/User/settings.json
 ln -sf $HOME/.dotfiles/config/vscode_keybindings $HOME/.config/Code/User/keybindings.json
 ln -sf $HOME/.dotfiles/config/vim $HOME/.vimrc
-
 success "symlinks created"
