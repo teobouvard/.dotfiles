@@ -4,4 +4,4 @@ export VISUAL=vim
 export GEM_HOME="$HOME/gems"
 export CUDA_HOME=/usr/local/cuda-10.0
 export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64
-export PATH="$/usr/local/cuda/bin:$HOME/gems/bin:$PATH"
+export PATH="$/usr/local/cuda/bin:/usr/local/go/bin:$HOME/gems/bin:$PATH"
