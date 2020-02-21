@@ -1,8 +1,6 @@
 wget
 ranger
 openssh
-neomutt
 pass
 isync
 msmtp
-chromium

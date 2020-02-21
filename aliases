@@ -1,5 +1,4 @@
 alias r="ranger"
-alias dot="cd $HOME/.dotfiles"
-alias py="python3"
-alias ipy="ipython3"
+alias py="python"
+alias ipy="ipython"
 alias jn="jupyter-notebook"

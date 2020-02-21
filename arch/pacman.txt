@@ -1,0 +1,8 @@
+openssh
+code
+redshift
+texlive-most
+python-pip
+ranger
+blueberry
+gnome-screenshot
